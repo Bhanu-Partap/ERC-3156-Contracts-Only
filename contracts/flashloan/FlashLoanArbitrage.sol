@@ -1,4 +1,3 @@
-// contracts/FlashLoan.sol
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.10;
 
@@ -45,11 +44,7 @@ contract FlashLoanArbitrage is FlashLoanSimpleReceiverBase {
         address initiator,
         bytes calldata params
     ) external override returns (bool) {
-        //
-        // This contract now has the funds requested.
-        // Your logic goes here.
-        //
-
+       
         // Arbirtage operation
         exchangeContract.depositUSDC(1000000000); // 1000 USDC
         exchangeContract.buyDAI();
